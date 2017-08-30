@@ -20,6 +20,6 @@ public class HelloController {
 		model.addAttribute("title", "Spring Security Hello World");
 		model.addAttribute("message", "This is user page!");
 		// Set view name
-		return "hello";
+		return "user";
 	}
 }
