@@ -1,4 +1,4 @@
-package com.sstechy.web.config;
+package com.javagain.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

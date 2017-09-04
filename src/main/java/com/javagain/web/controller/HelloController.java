@@ -1,4 +1,4 @@
-package com.sstechy.web.controller;
+package com.javagain.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
