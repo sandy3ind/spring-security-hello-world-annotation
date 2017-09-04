@@ -5,10 +5,10 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Admin Page</title>
+		<title>DBA Page</title>
 	</head>
 	<body>
-		<h1>This is Admin Page</h1>
+		<h1>This is DBA Page</h1>
 		<h3>Title : ${title}</h3>
 		<h3>Message : ${message}</h3>
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
