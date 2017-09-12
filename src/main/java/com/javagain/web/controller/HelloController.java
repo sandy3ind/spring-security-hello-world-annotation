@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HelloController {
 
 	/**
-	 * Show user page
+	 * Show User page
 	 * 
 	 * @param model
 	 * @return
@@ -29,7 +29,27 @@ public class HelloController {
 		return "user";
 	}
 	
+	/**
+	 * Show DBA page
+	 * 
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "dba", method = RequestMethod.GET)
+	public String  dbPage(Model model) {
+		// Set attribute on model
+		model.addAttribute("title", "Spring Security Hello World");
+		model.addAttribute("message", "This is protected page - DBA Page!");
+		// Return view name
+		return "dba";
+	}
 	
+	/**
+	 * Show Admin page
+	 * 
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value = "admin", method = RequestMethod.GET)
 	public String  adminPage(Model model) {
 		// Set attribute on model
@@ -37,10 +57,5 @@ public class HelloController {
 		model.addAttribute("message", "This is protected page - Admin Page!");
 		// Return view name
 		return "admin";
-	}
-	
-	@RequestMapping(value = "logoutSuccess", method = RequestMethod.GET)
-	public String  logoutSuccess() {		
-		return "logoutSuccess";
 	}
 }

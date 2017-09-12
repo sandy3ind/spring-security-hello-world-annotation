@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @EnableWebMvc
 @Configuration
-@ComponentScan({ "com.sstechy.web.*" })
+@ComponentScan({ "com.javagain.web.*" })
 @Import({ SecurityConfig.class })
 public class AppConfig {
 
