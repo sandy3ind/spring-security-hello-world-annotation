@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sstechy</groupId>
+	<groupId>com.javagain</groupId>
 	<artifactId>spring-security-hello-world-annotation</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
@@ -79,9 +79,9 @@
 		
 	</dependencies>
 	
-	<build>
-		<!-- Ignore web.xml -->
+	<build>		
 		<plugins>
+			<!-- Ignore web.xml -->
 	        <plugin>
 	            <groupId>org.apache.maven.plugins</groupId>
 	            <artifactId>maven-war-plugin</artifactId>
@@ -90,6 +90,18 @@
 	                <failOnMissingWebXml>false</failOnMissingWebXml>
 	            </configuration>
 	        </plugin>
+	        
+	        <!-- To use java compiler for Maven -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+	        
 	    </plugins>
 		<finalName>spring-security-hello-world-annotation</finalName>
 	</build>
